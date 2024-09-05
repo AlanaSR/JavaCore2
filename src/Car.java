@@ -4,8 +4,9 @@ public class Car extends ModelsType {
     }
 
     @Override
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+    public void check() {
+        super.check();
+        this.checkEngine();
     }
 
     public void checkEngine() {

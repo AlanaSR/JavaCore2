@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        ModelsType[] transports = new ModelsType[]{
+        CheckTransport[] transports = new CheckTransport[]{
                 new Car("car1", 4),
                 new Car("car2", 4),
                 new Truck("truck1", 6),
@@ -8,7 +8,9 @@ public class Main {
                 new Bicycle("bicycle1", 2),
                 new Bicycle("bicycle2", 2)
         };
-        ServiceStation serviceStation = new ServiceStation();
-        serviceStation.check(transports);
+        for (CheckTransport transport : transports) {
+            transport.check();
+        }
+
     }
 }
